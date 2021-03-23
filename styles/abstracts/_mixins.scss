@@ -1,0 +1,19 @@
+@mixin responsive($device) {
+  @media (max-width: $device) {
+      @content;
+  }
+}
+
+@mixin flx_bx($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin heading($font, $transform: uppercase) {
+  text-transform: $transform;
+  font: {
+    family: $fontBold;
+    size: $font
+  }
+}

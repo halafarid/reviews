@@ -1,0 +1,77 @@
+.navbar {
+  @include responsive($device-md) {
+    padding: 0.5rem;
+    &-brand {
+      width: 13rem;
+    }
+    .user {
+      &-img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  @include responsive($device-sm) {
+    .user {
+      &-name {
+        display: none;
+      }
+    }
+  }
+}
+
+.header {
+  @include responsive($device-lg) {
+    &_content {
+      width: 95%;
+      margin: 0 auto;
+      &-title {
+        font-size: $font-xl;
+      }
+    }
+  }
+}
+
+.card {
+  @include responsive($device-xl) {
+    &:first-child {
+      margin-top: -10rem;
+    }
+  }
+
+  @include responsive($device-md) {
+    width: 100%;
+    &:first-child {
+      margin-top: -5rem;
+    }
+    &_content {
+      padding: 6rem 0.5rem 3rem;
+    }
+  }
+  
+  @include responsive($device-sm) {
+    &_details {
+      &-rating {
+        display: block;
+        div {
+          justify-content: space-around;
+          border: none;
+          padding: 1rem 0;
+        }
+      }
+    }
+    &_review,
+    &_comment {
+      font-size: $font-sm;
+    }
+  }
+}
+
+.modal {
+  @include responsive($device-md) {
+    &-body {
+      padding: 1.5rem 1rem 0;
+    }
+  }
+}

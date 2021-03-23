@@ -1,0 +1,23 @@
+.header {
+  background: {
+    image: url('/bgCover.jpg');
+    size: cover;
+    repeat: no-repeat;
+    position: 100%;
+  };
+  position: relative;
+  text-align: center;
+  height: 90vh;
+
+  &_content {
+    color: $light;
+    position: relative;
+    z-index: 999;
+    
+    &-title {
+      @include heading($font-2xl);
+      padding: 11rem 0 5rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

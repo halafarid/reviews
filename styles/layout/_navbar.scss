@@ -1,0 +1,27 @@
+.navbar {
+  padding: 1rem;
+
+  &-brand {
+    width: 15%
+  }
+
+  &-user {
+    @include flx_bx(flex-start);
+    cursor: pointer;    
+    color: $dark;
+    &:hover {
+      color: $primary;
+    }
+    
+    .user {
+      &-img {
+        margin-right: 1rem; 
+      }
+      &-name {
+        @include heading($font-md, capitalize);
+        transition: color 0.3s ease-in-out;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,96 @@
+.card {
+  @extend %card;
+  position: relative;
+
+  .user {
+    &_logo {
+      position: absolute;
+      top: -5rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &_content {
+    padding: 6rem 6rem 3rem;
+  }
+
+  &_details {
+    text-align: center;
+    &-username {
+      color: $secondary;
+      margin-bottom: 0.5rem;
+    }
+    &-date {
+      color: $gray300;
+    }
+    &-title {
+      font-size: $font-lg;
+      margin: 1rem 0 1.5rem;
+    }
+    &-rating {
+      @include flx_bx(center);
+      border-left: 0;
+      margin: 1rem auto 2rem;
+
+      i {
+        color: $light;
+        padding: 1rem 2.5rem;
+      }
+      .like {
+        background: $like;
+      }
+      .dislike {
+        background: $dislike;
+      }
+      div {
+        @include flx_bx(space-between);
+        border: 0.2rem solid $gray100;
+        border-left: 0;
+        padding: 1rem 1.5rem;
+        color: $dark;
+      }
+      ul {
+        margin-right: 2rem !important;
+        justify-content: center;
+        li {
+          cursor: auto !important;
+        }
+      }
+    }
+  }
+
+  &_review {
+    color: $dark;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  &_comment {
+    background-color: $bright;
+    color: $darkness;
+    padding: 2rem 2rem 3rem;
+    margin: 3rem 0 4rem;
+    position: relative;
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border: {
+        left: 1.5rem solid transparent;
+        right: 1.5rem solid transparent;
+        bottom: 1.5rem solid $bright;
+      }
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .img--md {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -2.5rem
+    }
+  }
+}

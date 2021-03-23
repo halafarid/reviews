@@ -1,0 +1,23 @@
+.modal {
+  &-header {
+    align-items: center;
+  }
+  &-title {
+    @include heading($font-md);
+    padding-left: 2rem;
+  }
+  &-content {
+    border-radius: 0.5rem;
+  }
+  &-body {
+    padding: 1.5rem 3rem 0;
+  }
+  span {
+    font-size: $font-xl;
+    color: $gray200;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $gray300
+    }
+  }
+}

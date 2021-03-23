@@ -1,0 +1,32 @@
+.form {
+  background: $light;
+  border-radius: 0.5rem;
+
+  &_body {
+    padding: 2rem
+  }
+  &_control {
+    margin-bottom: 1.5rem;
+    label {
+      @include heading($font-sm);
+      display: block;
+      color: $dark;
+    }
+    input, textarea {
+      width: 100%;
+      border: 0.1rem solid $gray200;
+      background-color: $bright;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.4s ease-in-out;
+      &:focus {
+        background-color: $light;
+      }
+    }
+    svg {
+      &:hover {
+        color: $warning !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.btn {
+  &--light {
+    @extend %btn;
+    background-color: $light;
+    color: $primary;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      background-color: $primary;
+      color: $light;
+    }
+  }
+
+  &--primary {
+    @extend %btn;
+    background-color: $primary;
+    color: $gray100;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $primary-light;
+      color: $light;
+      box-shadow: 3px 3px 10px $gray200;
+    }
+  }
+
+  &_bx {
+    width: 100%;
+    text-align: center;
+  }
+
+  &--sm {
+    width: 17rem;
+    font-size: $font-xs;
+  }
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  &:hover {
+    background-color: $primary;
+    box-shadow: none;
+  }
+}

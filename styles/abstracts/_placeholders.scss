@@ -1,0 +1,16 @@
+%btn {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 1rem;
+  width: 21rem;
+  text-transform: uppercase;
+  font-family: $fontBold;
+}
+
+%card {
+  background-color: $light;
+  border-radius: 0.5rem;
+  border: none;
+  border: 0.1rem solid $gray100;
+  box-shadow: 0.1rem 0.3rem 1rem $gray100;
+}

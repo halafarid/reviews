@@ -1,0 +1,33 @@
+{
+  "currentUser": {
+    "avatar": "/profile-pic.png",
+    "name": "Khaled Mohamed"
+  },
+
+  "reviews": [
+    {
+      "id": 1,
+      "title": "Best App !",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "date": "20-1-2021",
+      "rating": 4,
+      "user": {
+        "avatar": "/profile-pic.png",
+        "name": "Ahmed Mohamed"
+      },
+      "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "id": 2,
+      "title": "Good !",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      "date": "2-7-2020",
+      "rating": 2,
+      "user": {
+        "avatar": "/profile-pic.png",
+        "name": "Mustafa Ahmed"
+      },
+      "comment": null
+    }
+  ]
+}
