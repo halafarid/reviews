@@ -1,4 +1,4 @@
-import Navbar from "../core/navbar";
+import Navbar from '../core/navbar'
 
 export default function MainLayout({ children }) {
   return (

@@ -3,5 +3,5 @@ import userActions from './userActions'
 
 export default {
   ...reviewActions,
-  ...userActions
+  ...userActions,
 }

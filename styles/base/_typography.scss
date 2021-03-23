@@ -1,27 +1,26 @@
 @font-face {
   font-family: 'OpenSansRegular';
-  src: url(../fonts/OpenSansRegular.eot) format('embedded-opentype'), 
-      url(../fonts/OpenSansRegular.woff2) format('woff2'), 
-      url(../fonts/OpenSansRegular.woff) format('woff'),
-      url(../fonts/OpenSansRegular.ttf) format('truetype');
+  src: url(../fonts/OpenSansRegular.eot) format('embedded-opentype'),
+    url(../fonts/OpenSansRegular.woff2) format('woff2'),
+    url(../fonts/OpenSansRegular.woff) format('woff'),
+    url(../fonts/OpenSansRegular.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'OpenSansBold';
-  src: url(../fonts/OpenSansBold.eot) format('embedded-opentype'), 
-      url(../fonts/OpenSansBold.woff2) format('woff2'), 
-      url(../fonts/OpenSansBold.woff) format('woff'), 
-      url(../fonts/OpenSansBold.ttf) format('truetype');
+  src: url(../fonts/OpenSansBold.eot) format('embedded-opentype'),
+    url(../fonts/OpenSansBold.woff2) format('woff2'), url(../fonts/OpenSansBold.woff) format('woff'),
+    url(../fonts/OpenSansBold.ttf) format('truetype');
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-	font-family: $fontRegular;
-	font-size: 1.6rem;
-	line-height: 1.8;
+  font-family: $fontRegular;
+  font-size: 1.6rem;
+  line-height: 1.8;
   word-break: break-word;
 }
 
@@ -29,7 +28,7 @@ h1,
 h2,
 h3,
 h4 {
-	line-height: 1.2;
+  line-height: 1.2;
 }
 
 img {

@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { Collapse } from 'react-bootstrap';
-import BeautyStars from 'beauty-stars';
-import FormInput from '../formInput';
-import CommentCard from './commentCard';
-import { addComment } from './../../redux/actions/reviewActions';
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useForm } from 'react-hook-form'
+import { Collapse } from 'react-bootstrap'
+import BeautyStars from 'beauty-stars'
+import FormInput from '../formInput'
+import CommentCard from './commentCard'
+import { addComment } from './../../redux/actions/reviewActions'
 
 export default function ReviewCard({ review }) {
   const [show, setShow] = useState(false)
@@ -30,7 +30,10 @@ export default function ReviewCard({ review }) {
           <p className='card_details-date'>{review?.date}</p>
           <h3 className='card_details-title'>{review?.title}</h3>
           <div className='card_details-rating'>
-            <i className={`fas fa-2x ${review?.rating > 3 ? 'fa-thumbs-up like' : 'fa-thumbs-down dislike'}`}></i>
+            <i
+              className={`fas fa-2x ${
+                review?.rating > 3 ? 'fa-thumbs-up like' : 'fa-thumbs-down dislike'
+              }`}></i>
             <div>
               <BeautyStars
                 value={review?.rating}
@@ -52,7 +55,7 @@ export default function ReviewCard({ review }) {
 
         <form className='form' onSubmit={handleSubmit(onSubmit)}>
           <Collapse in={show}>
-            <div id="showComment">
+            <div id='showComment'>
               <FormInput
                 register={register}
                 label='comment'
@@ -63,16 +66,17 @@ export default function ReviewCard({ review }) {
               />
             </div>
           </Collapse>
-          {!review?.comment && <div className='btn_bx'>
-            <button
-            onClick={() => setShow(true)}
-            className='btn--primary'
-            aria-controls="showComment"
-            aria-expanded={show}
-            >
-              Add Comment
-            </button>
-          </div>}
+          {!review?.comment && (
+            <div className='btn_bx'>
+              <button
+                onClick={() => setShow(true)}
+                className='btn--primary'
+                aria-controls='showComment'
+                aria-expanded={show}>
+                Add Comment
+              </button>
+            </div>
+          )}
         </form>
       </div>
     </div>

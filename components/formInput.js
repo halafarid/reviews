@@ -1,15 +1,7 @@
-export default function FormInput({
-  register,
-  label,
-  labelTxt,
-  controlType,
-  rows,
-  req
-}) {
+export default function FormInput({ register, label, labelTxt, controlType, rows, req }) {
   return (
     <div className='form_control'>
       <label htmlFor={label}>{labelTxt}</label>
-
       {controlType === 'textarea' ? (
         <textarea
           rows={rows ? rows : '3'}

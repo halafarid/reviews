@@ -1,12 +1,13 @@
 import Head from 'next/head'
-import { useEffect, useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
-import ModalOverlay from '../components/modal'
+import { useEffect, useState } from 'react'
+import { connect, useDispatch } from 'react-redux'
+import Header from './../components/core/header'
+import ModalOverlay from '../components/modalOverlay'
 import ReviewCard from '../components/cards/reviewCard'
-import { getReviews } from '../redux/actions/reviewActions';
+import { getReviews } from '../redux/actions/reviewActions'
 
 function Home({ reviews }) {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -20,25 +21,19 @@ function Home({ reviews }) {
       </Head>
 
       <ModalOverlay show={show} setShow={setShow} />
-      
-      <header className='header'>
-        <div className='overlay'></div>
-        <div className='header_content'>
-          <h1 className='header_content-title'>What Our Users Say About Shahry ?</h1>
-          <button className='btn--light' onClick={() => setShow(true)}>Add a review</button>
-        </div>
-      </header>
+
+      <Header setShow={setShow}></Header>
 
       <div className='container'>
-        {reviews?.map(review =>
+        {reviews?.map((review) => (
           <ReviewCard key={review.id} review={review} />
-        )}
+        ))}
       </div>
     </div>
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   reviews: state.reviewRed.reviews,
 })
 

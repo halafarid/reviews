@@ -1,7 +1,7 @@
 import * as types from '../types'
 
 const initialState = {
-  reviews: null
+  reviews: null,
 }
 
 const reviewReducer = (state = initialState, action) => {
@@ -14,7 +14,7 @@ const reviewReducer = (state = initialState, action) => {
     case types.ADD_REVIEW:
       return {
         ...state,
-        reviews: [action.payload, ...state.reviews]
+        reviews: [action.payload, ...state.reviews],
       }
     case types.ADD_COMMENT:
       let revs = [...state.reviews]

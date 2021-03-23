@@ -49,7 +49,7 @@
       padding: 6rem 0.5rem 3rem;
     }
   }
-  
+
   @include responsive($device-sm) {
     &_details {
       &-rating {

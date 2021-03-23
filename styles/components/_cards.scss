@@ -4,10 +4,7 @@
 
   .user {
     &_logo {
-      position: absolute;
-      top: -5rem;
-      left: 50%;
-      transform: translateX(-50%);
+      @include abs_pos(-5rem);
     }
   }
 
@@ -63,6 +60,7 @@
   &_review {
     color: $dark;
     line-height: 1.5;
+    white-space: pre-wrap;
     margin-bottom: 2rem;
   }
 
@@ -72,6 +70,8 @@
     padding: 2rem 2rem 3rem;
     margin: 3rem 0 4rem;
     position: relative;
+    white-space: pre-wrap;
+    animation: fadeInFromNone 1s ease-in-out;
 
     .triangle {
       width: 0;
@@ -81,16 +81,15 @@
         right: 1.5rem solid transparent;
         bottom: 1.5rem solid $bright;
       }
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
+      @include abs_pos(-15px);
     }
     .img--md {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -2.5rem
+      @include abs_pos();
+      margin-top: 0.5rem;
     }
+  }
+
+  textarea {
+    border: none;
   }
 }

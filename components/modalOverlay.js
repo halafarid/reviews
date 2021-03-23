@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux'
 import { Modal } from 'react-bootstrap'
-import BeautyStars from 'beauty-stars';
-import store from './../redux/store';
-import FormInput from "./formInput";
-import { addReview } from '../redux/actions/reviewActions';
+import BeautyStars from 'beauty-stars'
+import store from '../redux/store'
+import FormInput from './formInput'
+import { addReview } from '../redux/actions/reviewActions'
 
 export default function ModalOverlay({ show, setShow }) {
   const [rating, setRating] = useState(1)
@@ -15,16 +15,21 @@ export default function ModalOverlay({ show, setShow }) {
   })
   const { isValid } = formState
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     setShow(false)
     const date = new Date()
     const today = {
       mm: date.getMonth() + 1,
       dd: date.getDate(),
-      yyyy: date.getFullYear()
-    };
+      yyyy: date.getFullYear(),
+    }
     const currentUser = store.getState().userRed.currentUser
-    const result = {...data, rating, user: currentUser, date: `${today.dd}-${today.mm}-${today.yyyy}`}
+    const result = {
+      ...data,
+      rating,
+      user: currentUser,
+      date: `${today.dd}-${today.mm}-${today.yyyy}`,
+    }
     dispatch(addReview(result))
   }
 
@@ -47,14 +52,10 @@ export default function ModalOverlay({ show, setShow }) {
               activeColor='#ffd600'
               size='20px'
               gap='5px'
-              onChange={newValue => setRating(newValue)}
+              onChange={(newValue) => setRating(newValue)}
             />
           </div>
-          <FormInput
-            register={register}
-            label='title'
-            labelTxt='Review Title'
-          />
+          <FormInput register={register} label='title' labelTxt='Review Title' />
           <FormInput
             register={register}
             label='details'
@@ -63,7 +64,9 @@ export default function ModalOverlay({ show, setShow }) {
           />
         </Modal.Body>
         <Modal.Footer>
-          <button type='submit' className='btn--primary btn--sm' disabled={!isValid}>Add Review</button>
+          <button type='submit' className='btn--primary btn--sm' disabled={!isValid}>
+            Add Review
+          </button>
         </Modal.Footer>
       </form>
     </Modal>

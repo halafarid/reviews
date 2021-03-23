@@ -4,7 +4,7 @@ export default function CommentCard({ comment }) {
       <div className='triangle'></div>
       <p>{comment}</p>
       <div className='img--md'>
-        <img src='/profile-pic.png' alt='profile' />
+        <img src='/users/me.jpg' alt='profile' />
       </div>
     </div>
   )

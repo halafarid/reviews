@@ -1,6 +1,6 @@
 @mixin responsive($device) {
   @media (max-width: $device) {
-      @content;
+    @content;
   }
 }
 
@@ -14,6 +14,24 @@
   text-transform: $transform;
   font: {
     family: $fontBold;
-    size: $font
+    size: $font;
   }
+}
+
+@mixin btnBx($color1, $color2, $hovColor1: $color2, $hovColor2: $color1) {
+  background-color: $color1;
+  color: $color2;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $primary;
+    color: $light;
+  }
+}
+
+@mixin abs_pos($top: null) {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: $top;
 }
